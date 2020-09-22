@@ -1,0 +1,9 @@
+class Main {
+  public static void main(String[] args) {
+    int count=0;//初始值
+    float temp;
+    temp=0;//初始值
+    System.out.println("count="+count);
+    System.out.println("temp="+temp);
+  }
+}
