@@ -1,0 +1,23 @@
+Q1：輸入一個值，判斷是否為質數?
+----
+```java
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int N,i=1,count=0;//建立變數
+
+        Scanner sc=new Scanner(System.in);//建立Scanner物件
+        System.out.print("x=");
+        N=sc.nextInt();//取得x
+
+        for(;;){
+            if(i>N)break;//當i>N，離開迴圈
+            if(N%i==0) count++;//當N/i餘數為0，count+1
+            i++;
+        }
+        if(count==2) System.out.println(N+"為質數");//當count為2，N為質數
+        else System.out.println(N+"不為質數");//當count不為2，N不為質數
+    }
+}
+```
