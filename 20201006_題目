@@ -21,3 +21,56 @@ class Main {
     }
 }
 ```
+Q2：輸入2數，求最大公因數?
+----
+方1：
+```java
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int M,N,R;//建立變數
+
+        Scanner sc=new Scanner(System.in);//建立Scanner物件
+        System.out.print("輸入兩數(以空白隔開)=");
+        M=sc.nextInt();//取得x
+        N=sc.nextInt();//取得y
+
+        R=GCD(M,N);
+        while(R!=0){
+            M=N;
+            N=R;
+            R=GCD(M,N);
+        }
+        System.out.println("最大公因數為"+N);
+    }
+    private static int GCD(int m,int n){
+        int r;
+        r=m%n;
+        return r;
+    }
+}
+```
+方2：
+```java
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        int M,N,R;//建立變數
+
+        Scanner sc=new Scanner(System.in);//建立Scanner物件
+        System.out.print("輸入兩數(以空白隔開)=");
+        M=sc.nextInt();//取得x
+        N=sc.nextInt();//取得y
+
+        R=M%N;
+        while(R!=0){
+            M=N;
+            N=R;
+            R=M%N;
+        }
+        System.out.println("最大公因數為"+N);
+    }
+}
+```
