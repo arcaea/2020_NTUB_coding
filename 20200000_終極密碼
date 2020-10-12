@@ -1,0 +1,26 @@
+法1(無限迴圈)
+```java
+class Main {
+  public static void main(String[] args) {
+    
+    int r = 0,pwd,max=99,min=1;//宣告變數
+    r = (int)(Math.random()*97)+2;//2-98之間的亂數
+    
+    java.util.Scanner sc=new java.util.Scanner(System.in);//建立Scanner物件
+    
+    do{
+      System.out.print("輸入"+min+"-"+max+"之間的一個整數=");
+      pwd=sc.nextInt();//取得輸入值
+
+      if(pwd<r){//
+        min=pwd;
+      }else if(pwd>r){
+        max=pwd;
+      }else{
+        System.out.print("你猜到了!!!!");
+        break;
+      }
+    }while(true);
+  }
+}
+```
