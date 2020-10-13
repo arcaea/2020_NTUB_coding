@@ -27,10 +27,12 @@ class Main {
                 Runtime run=Runtime.getRuntime();
                 try {
 
-                    run.exec("Shutdown.exe -s -t "+10);
+                    run.exec("Shutdown.exe -s -t 3600");
+                    Thread.sleep(1000);
+                    run.exec("Shutdown.exe -a");
 
 
-                } catch (IOException e) {
+                } catch (IOException | InterruptedException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
@@ -40,5 +42,4 @@ class Main {
         System.out.print("是"+pwd+"，你猜到囉!!!!");//印出答案
     }
 }
-
 ```
