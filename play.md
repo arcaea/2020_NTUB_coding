@@ -1,6 +1,7 @@
 ```java
 package com.company;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -26,12 +27,10 @@ class Main {
                 System.out.println("沒有在範圍內QAQ");
                 Runtime run=Runtime.getRuntime();
                 try {
-
-                    run.exec("Shutdown.exe -s -t 3600");
-                    Thread.sleep(1000);
+                    run.exec("Shutdown.exe -s -t 10");
+                    JOptionPane.showMessageDialog(null, "即將關機", "誰叫你輸入錯誤!!", JOptionPane.WARNING_MESSAGE);
+                    Thread.sleep(5000);
                     run.exec("Shutdown.exe -a");
-
-
                 } catch (IOException | InterruptedException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
