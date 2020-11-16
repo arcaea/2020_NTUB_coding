@@ -3,8 +3,9 @@ python版
 ```python
 #stop running : kernel-->restart
 #input("請猜一數：") 輸入皆為String
+import random
 
-answer=123
+answer=random.randint(minN,maxN)
 guess=-1
 minN=1
 maxN=1000
@@ -13,11 +14,14 @@ history=[]
 while guess!=answer:
     print(minN,"~",maxN)
     while True:#無限迴圈
-        guess=int(input("請猜一數："))#轉型成int
-        if guess>minN and guess < maxN:
-            history.append(guess)
-            break
-        print("FAQ~~別亂輸入數字!!")
+        try:
+            guess=int(input("請猜一數："))#轉型成int
+            if guess>minN and guess < maxN:
+                history.append(guess)
+                break
+            print("FAQ~~別亂輸入數字!!")
+        except:
+            print("FAQ~~看不懂中文???")
     
     if guess<answer:
         minN=guess
