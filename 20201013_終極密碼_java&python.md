@@ -2,10 +2,10 @@ python版
 ----
 ```python
 #stop running : kernel-->restart
+#input("請猜一數：") 輸入皆為String
 
 answer=123
 guess=-1
-#input("請猜一數：") 輸入皆為String
 
 while guess!=answer:
     guess=int(input("請猜一數："))#轉型成int
