@@ -6,13 +6,20 @@ python版
 
 answer=123
 guess=-1
+minN=1
+maxN=1000
 
 while guess!=answer:
-    guess=int(input("請猜一數："))#轉型成int
+    print(minN,"~",maxN)
+    while True:#無限迴圈
+        guess=int(input("請猜一數："))#轉型成int
+        if guess>minN and guess < maxN:
+            break
+        print("FAQ~~別亂輸入數字!!")
     if guess<answer:
-        print("大一點")
-    elif guess>answer:
-        print("小一點")
+        minN=guess
+    elif guess>answer:#elif=else if
+        maxN=guess
     else:
         print("答對~!")
 ```
