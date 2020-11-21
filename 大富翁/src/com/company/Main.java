@@ -1,9 +1,15 @@
 package com.company;
 
+import javax.swing.*;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Random;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MalformedURLException {
 	// write your code here
+        Dice.Dice();
     }
 }
 
@@ -57,5 +63,40 @@ class Place {
 
     public static void Place(int num_player,int num_place) {
 
+    }
+}
+///////////////////////////////////////
+//骰子
+class Dice{
+    public static void Dice() throws MalformedURLException {
+        String[] diceUML ={"file:///C:/Users/user/Desktop/%E5%9C%96/gif/Anime-Gifs.gif","file:///C:/Users/user/Desktop/%E5%9C%96/gif/oLTQoDf.gif",
+                "file:///C:/Users/user/Desktop/%E5%9C%96/gif/200.gif","file:///C:/Users/user/Desktop/%E5%9C%96/gif/179026.gif",
+                "file:///C:/Users/user/Desktop/%E5%9C%96/gif/200%20(1).gif","file:///C:/Users/user/Desktop/%E5%9C%96/gif/a7148d7107e74ff4ad43d2e6b74d6c53b872bad484b2d-s5skzh.gif"};
+
+        int d1 = 0,d2=0;
+        d1 = (int)(Math.random()*6);
+        d2 = (int)(Math.random()*6);
+
+        URL url1 = new URL(diceUML[d1]);//"<URL to your Animated GIF>"
+        Icon icon1 = new ImageIcon(url1);
+        JLabel label1 = new JLabel(icon1);
+
+        URL url2 = new URL(diceUML[d2]);//"<URL to your Animated GIF>"
+        Icon icon2 = new ImageIcon(url2);
+        JLabel label2 = new JLabel(icon2);
+
+        JFrame f = new JFrame("Animation");
+        f.getContentPane().add(label1);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.pack();
+        f.setLocationRelativeTo(null);
+        f.setVisible(true);
+
+        JFrame f2 = new JFrame("Animation");
+        f2.getContentPane().add(label2);
+        f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f2.pack();
+        f2.setLocationRelativeTo(null);
+        f2.setVisible(true);
     }
 }
