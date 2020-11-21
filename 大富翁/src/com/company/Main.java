@@ -69,9 +69,9 @@ class Place {
 //骰子
 class Dice{
     public static void Dice() throws MalformedURLException {
-        String[] diceUML ={"file:///C:/Users/user/Desktop/%E5%9C%96/gif/Anime-Gifs.gif","file:///C:/Users/user/Desktop/%E5%9C%96/gif/oLTQoDf.gif",
-                "file:///C:/Users/user/Desktop/%E5%9C%96/gif/200.gif","file:///C:/Users/user/Desktop/%E5%9C%96/gif/179026.gif",
-                "file:///C:/Users/user/Desktop/%E5%9C%96/gif/200%20(1).gif","file:///C:/Users/user/Desktop/%E5%9C%96/gif/a7148d7107e74ff4ad43d2e6b74d6c53b872bad484b2d-s5skzh.gif"};
+        String[] diceUML ={"UML1","UML2",
+                "UML3","UML4",
+                "UML5","UML6"};
 
         int d1 = 0,d2=0;
         d1 = (int)(Math.random()*6);
