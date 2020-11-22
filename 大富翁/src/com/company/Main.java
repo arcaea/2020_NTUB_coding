@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) throws MalformedURLException {
 	// write your code here
-        Dice.Dice();
+        Dice.Dice();//測試用
     }
 }
 
