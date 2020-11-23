@@ -1,4 +1,4 @@
-|Classification[#Classification]|Clustering[#Clustering]|
+|[#Classification]|[#Clustering]|
 |:----:|:----:|
 
 Classification
