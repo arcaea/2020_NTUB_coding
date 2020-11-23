@@ -45,5 +45,45 @@ print(metrics.classification_report(y_test,y_pred2))
 
 Clustering
 ----
-
+```python
+#Clustering
+import pandas as pd
+rating=[['n1',1,1,1,1],
+        ['n2',2,2,2,2],
+        ['n3',3,3,3,3],
+        ['n4',4,4,4,4],
+        ['n5',5,5,5,5],]
+movies =pd.DataFrame(rating,columns=['Name','A','B','C','D'])
+movies
+```
+```python
+from sklearn.cluster import KMeans
+data =movies.drop('Name',axis=1)
+model3=KMeans(n_clusters=2)
+model3.fit(data)
+print(model3.labels_)
+```
+```python
+model3.cluster_centers_
+```
+```python
+from sklearn import datasets
+import matplotlib.pyplot as plt
+%matplotlib inline
+data,y=datasets.make_moons(n_samples=500,noise=1)
+data=pd.DataFrame(data,columns=['x','y'])
+data.plot.scatter(x='x',y='y')
+```
+```python
+from sklearn.cluster import KMeans
+model3=KMeans(n_clusters=2)
+model3.fit(data)
+data.plot.scatter(x='x',y='y',c=model3.labels_,cmap='jet')
+```
+```python
+from sklearn.cluster import DBSCAN
+model4=DBSCAN(eps=0.2,min_samples=10)
+model4.fit(data)
+data.plot.scatter(x='x',y='y',c=model4.labels_,cmap='jet')
+```
 [top](#top)
