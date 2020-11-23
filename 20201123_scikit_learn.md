@@ -1,5 +1,5 @@
 |top|[Classification](#Classification)|[Clustering](#Clustering)|
-|:----:|:----:|
+|:----:|:----:|:----:|
 
 Classification
 ----
@@ -41,6 +41,9 @@ from sklearn import metrics
 print(metrics.classification_report(y_test,y_pred))
 print(metrics.classification_report(y_test,y_pred2))
 ```
+[top](#top)
 
 Clustering
 ----
+
+[top](#top)
