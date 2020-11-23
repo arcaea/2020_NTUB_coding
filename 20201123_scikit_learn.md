@@ -1,3 +1,6 @@
+|Classification[#Classification]|Clustering[#Clustering]|
+|:----:|:----:|
+
 Classification
 ----
 ```python
