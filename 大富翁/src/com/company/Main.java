@@ -1,14 +1,16 @@
 package com.company;
+package com.company;
 
 import javax.swing.*;
+import java.awt.*;
+import java.io.File;
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Random;
+
 
 public class Main {
 
     public static void main(String[] args) throws MalformedURLException {
-	// write your code here
+        // write your code here
         Dice.Dice();//測試用
     }
 }
@@ -65,38 +67,42 @@ class Place {
 
     }
 }
+
+
+
+
+
 ///////////////////////////////////////
 //骰子
 class Dice{
     public static void Dice() throws MalformedURLException {
-        String[] diceUML ={"UML1","UML2",
-                "UML3","UML4",
-                "UML5","UML6"};
+
+String[] diceUML={"src/assets/touzidice1.gif","src/assets/touzidice2.gif",
+        "src/assets/touzidice3.gif","src/assets/touzidice4.gif",
+        "src/assets/touzidice5.gif","src/assets/touzidice6.gif",};
 
         int d1 = 0,d2=0;
-        d1 = (int)(Math.random()*6);
-        d2 = (int)(Math.random()*6);
+        d1 = (int)(Math.random()*5)+1;
+        d2 = (int)(Math.random()*5)+1;
 
-        URL url1 = new URL(diceUML[d1]);//"<URL to your Animated GIF>"
-        Icon icon1 = new ImageIcon(url1);
+        File dice1 = new File(diceUML[d1]);
+        File dice2 = new File(diceUML[d2]);
+
+
+        Icon icon1 = new ImageIcon(String.valueOf(dice1));
         JLabel label1 = new JLabel(icon1);
 
-        URL url2 = new URL(diceUML[d2]);//"<URL to your Animated GIF>"
-        Icon icon2 = new ImageIcon(url2);
+        Icon icon2 = new ImageIcon(String.valueOf(dice2));
         JLabel label2 = new JLabel(icon2);
 
+
         JFrame f = new JFrame("Animation");
-        f.getContentPane().add(label1);
+        Container cp=f.getContentPane();
+        cp.add(f.getContentPane().add(label1), BorderLayout.EAST);
+        cp.add(f.getContentPane().add(label2), BorderLayout.WEST);
+
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.pack();
         f.setLocationRelativeTo(null);
         f.setVisible(true);
-
-        JFrame f2 = new JFrame("Animation");
-        f2.getContentPane().add(label2);
-        f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f2.pack();
-        f2.setLocationRelativeTo(null);
-        f2.setVisible(true);
     }
-}
