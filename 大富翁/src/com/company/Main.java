@@ -70,7 +70,7 @@ class Dice{
 
 String[] diceUML={"src/assets/touzidice1.gif","src/assets/touzidice2.gif",
         "src/assets/touzidice3.gif","src/assets/touzidice4.gif",
-        "src/assets/touzidice5.gif","src/assets/touzidice6.gif",};
+        "src/assets/touzidice5.gif","src/assets/touzidice6.gif"};
 
         int d1 = 0,d2=0;
         d1 = (int)(Math.random()*5)+1;
