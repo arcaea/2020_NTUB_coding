@@ -6,15 +6,12 @@ import java.awt.*;
 import java.io.File;
 import java.net.MalformedURLException;
 
-
 public class Main {
-
     public static void main(String[] args) throws MalformedURLException {
         // write your code here
         Dice.Dice();//測試用
     }
 }
-
 ///////////////////////////////////////
 //玩家
 class Player {
@@ -24,7 +21,6 @@ class Player {
     public static int[][] own_place={new int[40],new int[40],new int[40],new int[40]};//玩家擁有地
     public static int[] mul_pass_money_player={1,1,1,1};//過路費倍數(玩家部分)
 }
-
 ///////////////////////////////////////
 //地點
 class Place {
@@ -67,11 +63,6 @@ class Place {
 
     }
 }
-
-
-
-
-
 ///////////////////////////////////////
 //骰子
 class Dice{
